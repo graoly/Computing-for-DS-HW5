@@ -7,7 +7,9 @@ authors = [
     { name = "graoly", email = "roy.gal@mail.utoronto.ca" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "pandas>=3.1.0",
+]
 
 [project.scripts]
 computing-for-ds-hw5 = "computing_for_ds_hw5:main"
