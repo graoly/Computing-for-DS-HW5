@@ -118,14 +118,14 @@ class Deck:
             return
         card = self.cards.pop()
         print(card.suit, card.value)
+#manual test
+#deck = Deck()
 
-deck = Deck()
-
-for card in deck.cards:
-    print(card.value, "of", card.suit)
+#for card in deck.cards:
+   # print(card.value, "of", card.suit)
     
-deck.shuffle()
-deck.draw()
+#deck.shuffle()
+#deck.draw()
 
 ###################
 
