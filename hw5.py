@@ -18,7 +18,6 @@
 # the parameters should be stored as attributes
 # called "name" and "symptoms" respectively
 
-
 #
 # 1.2)
 # Create a method called "add_test"
@@ -27,7 +26,6 @@
 # 2. the results of the test (bool)
 #
 # This information should be stored somehow.
-
 
 #
 # 1.3)
@@ -41,12 +39,33 @@
 # The probability should work as follows:
 #
 # 1. If the user has had the test "covid"
-#    then it should return .99 if the test
+#    then it should return 0.99 if the test
 #    is True and 0.01 if the test is False
 # 2. Otherwise, probability starts at 0.05
 #    and increases by 0.1 for each of the
 #    following symptoms:
 #    ['fever', 'cough', 'anosmia']
+
+# Patient class
+class Patient:
+    # Initialize class
+    def __init__(self, name, symptoms):
+        self.name = name
+        self.symptoms = symptoms
+        self.test_storage = {}
+    
+    # Stored in a dictionary
+    def add_test(self, name: str, result: bool):
+        self.test_storage[name] = result
+
+    # Probability that the user has covid: 0.99 otherwise 0.05 + 0.1 * num for num the number of matchings from list match_list
+    def has_covid(self) -> float:
+        if "covid" in self.test_storage:
+            return 0.99 if self.test_storage["covid"] else 0.01
+        else:
+            match_list = ['fever', 'cough', 'anosmia']
+            leftover = 0.1 * sum(symptom in match_list for symptom in set(self.symptoms))
+            return 0.05 + leftover
 
 
 ######################
