@@ -1,16 +1,19 @@
 [project]
-name = "computing-for-ds-hw5"
+name = "diabetes-prediction"
 version = "0.1.0"
-description = "Add your description here"
+description = "Class based components for diabetes mellitus data analysis"
 readme = "README.md"
 authors = [
     { name = "graoly", email = "roy.gal@mail.utoronto.ca" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "pandas>=2.2",
+    "scikit-learn>=1.5",
+]
 
 [project.scripts]
-computing-for-ds-hw5 = "computing_for_ds_hw5:main"
+diabetes-prediction = "diabetes_prediction:main"
 
 [build-system]
 requires = ["uv_build>=0.12.10,<0.13.0"]
