@@ -3,6 +3,7 @@
 .venv.nosync/
 venv/
 env/
+.venv
 
 # Python bytecode and caches
 __pycache__/
