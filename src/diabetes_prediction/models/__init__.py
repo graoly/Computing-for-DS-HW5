@@ -1,0 +1,1 @@
+from diabetes_prediction.models.random_forest import RandomForestModel

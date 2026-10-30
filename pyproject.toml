@@ -8,12 +8,12 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
+    "jupyter>=1.1.1",
     "pandas>=2.2",
     "scikit-learn>=1.5",
 ]
 
-[project.scripts]
-diabetes-prediction = "diabetes_prediction:main"
+
 
 [build-system]
 requires = ["uv_build>=0.12.10,<0.13.0"]
