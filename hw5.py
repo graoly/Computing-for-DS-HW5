@@ -65,7 +65,7 @@ class Patient:
         else:
             match_list = ['fever', 'cough', 'anosmia']
             leftover = 0.1 * sum(symptom in match_list for symptom in set(self.symptoms))
-            return 0.05 + leftover
+            return round(0.05 + leftover, 2)
 
 
 ######################
